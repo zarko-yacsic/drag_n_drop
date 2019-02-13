@@ -1,0 +1,37 @@
+
+body { margin-top: 20px !important;}
+body, * { font-family: "Open Sans", Arial, sans-serif !important; color: #666666;}
+
+.drag_container { margin-bottom: 20px !important;}
+.drag_container, .drag_buttons { width: 1040px; overflow: auto; margin: 0px auto 0px auto;}
+.drag_container h2 { font-size: 28px; margin-bottom: 20px; font-weight: bold;}
+.drag_container p { font-size: 16px; margin-bottom: 30px;}
+.drag_container h2, .drag_container p { text-align: center;}
+.drag_container .drag_column { background-color: #F7F7F7; border: 1px solid #DADADA; padding: 20px; overflow: auto;}
+.drag_container .drag_subtitulos { overflow: auto;}
+.drag_container .drag_subtitulos > h3,
+.drag_container .drag_column { width: 330px; overflow: auto !important; float: left; margin-right: 20px;}
+.drag_container .drag_subtitulos > h3 {
+  margin: 0px 20px 20px 0px;
+  padding: 0px 20px 8px 20px;
+  text-align: center;
+  border: 1px solid #FFFFFF;
+  border-bottom: 1px dotted #CCCCCC;
+  font-size: 18px;
+  font-weight: bold;
+}
+.drag_container .drag_column:last-of-type, 
+.drag_container .drag_subtitulos > h3:last-of-type { margin-right: 0px !important;}
+.drag_container #ul_categorias { list-style: none; margin: 0px; padding: 0px;}
+.drag_container #ul_categorias > li { border-bottom: 1px dotted #DDDDDD; padding: 5px;}
+.drag_container #ul_categorias > li > label { display: block; cursor: pointer;}
+.drag_container .drag_column .draggable_item { margin: 0px; padding-bottom: 10px;}
+.drag_container .drag_column .draggable_item > .draggable_inner {
+  padding: 16px;
+  border: 1px solid #DDDDDD;
+  background-color: #FCFCFC;
+  cursor: all-scroll;
+}
+.drag_buttons { margin-bottom: 40px;}
+.drag_buttons > button { float: right;}
+
