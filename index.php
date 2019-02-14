@@ -172,7 +172,7 @@ function drop(ev, el){
 }
 
 
-function renameItem(myObj, str_search, str_replace){p
+function renameItem(myObj, str_search, str_replace){
 	var id = $(myObj).attr('id');
 	var id_new = id.replace(str_search, str_replace);
 	$(myObj).attr('id', id_new);
