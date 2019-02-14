@@ -23,7 +23,7 @@ if($result = $conDB->query($sql)){
 	if (mysqli_num_rows($result) > 0){
 		while ($row = $result->fetch_assoc()){
 		$preguntas .= '<div draggable="true" ondragstart="drag(event)" class="draggable_item" id="drag_PRG_' . strval($p + 1) . '" data-id_pregunta="' . $row['id'] . '" data-orden="0">
-					<div class="draggable_inner" id="draggable_inner_' . strval($p + 1) . '">' . $row['pregunta'] . '</div>
+					<div class="draggable_inner" id="draggable_inner_' . strval($p + 1) . '">' . utf8_encode($row['pregunta']) . '</div>
 				</div>';
 		$p++;
 		}
@@ -39,7 +39,7 @@ if($result = $conDB->query($sql)){
 		while ($row = $result->fetch_assoc()){
 			$categorias .= '<li><label for="rd_categoria_' . $row['id_categoria'] . '">
 					<input type="radio" value="' . $row['id_categoria'] . '" name="rd_categoria" id="rd_categoria_' . $row['id_categoria'] . '">
-					<span>' . $row['categoria'] . '</span>
+					<span>' . utf8_encode($row['categoria']) . '</span>
 				</label>
 			</li>';
 		}
@@ -172,7 +172,7 @@ function drop(ev, el){
 }
 
 
-function renameItem(myObj, str_search, str_replace){
+function renameItem(myObj, str_search, str_replace){p
 	var id = $(myObj).attr('id');
 	var id_new = id.replace(str_search, str_replace);
 	$(myObj).attr('id', id_new);
